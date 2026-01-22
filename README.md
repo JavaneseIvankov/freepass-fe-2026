@@ -72,11 +72,22 @@ While original UI design is not mandatory, the app should be polished and intuit
 * [Behance](https://www.behance.net/)
 * [Mobbin](https://mobbin.com/)
 * [Screenlane](https://screenlane.com/)
+
+### 4. Application Deployment
+The application must be deployed as a working app, not just source code.<br>
+Supported deployment targets:<br>
+* Android (APK)
+The deployed app must be:
+* Installable / accessible
+* Stable (no critical crashes)
+* Aligned with the submitted source code
   
-#### Bonus Point
-* Implement complex animations
+#### Bonus Points
+* Implement complex or custom animations
 * Add theme switching (e.g., light/dark mode)
-* Ensure a responsive layout across screen sizes
+* Ensure responsive layouts across different screen sizes
+* Apply clean architecture or modular folder structure
+* Add basic documentation or README explaining setup and features
 
 ## 🗂️ Submission Guidline
 1. [Fork this repository on GitHub](https://help.github.com/articles/fork-a-repo) then do the following:
@@ -105,4 +116,5 @@ While original UI design is not mandatory, the app should be polished and intuit
 It’s all up to you now! If you have any questions, feel free to reach out using the contact details above. And remember, this isn’t the only way to join us—good luck, give it your best shot!
 <br/>
 <br/>
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdncwcWRoZ2dkcTYxamV2azJlZW9vbmw2YWZweXVkZzhtam84d2JrNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LR5GeZFCwDRcpG20PR/giphy.gif" width="100%">
 ~ FE BCC 2026
