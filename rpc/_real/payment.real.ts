@@ -46,3 +46,21 @@ export async function uploadPaymentProofReal(
   }
   return response.json();
 }
+
+/**
+ * Confirm payment (real API - MVP implementation)
+ * TODO: Implement when backend is ready
+ */
+export async function confirmPaymentReal(orderId: string): Promise<OrderDTO> {
+  const response = await fetch(
+    `${API_BASE_URL}/orders/${orderId}/payment/confirm`,
+    {
+      method: "POST",
+      credentials: "include",
+    },
+  );
+  if (!response.ok) {
+    throw new Error("Failed to confirm payment");
+  }
+  return response.json();
+}

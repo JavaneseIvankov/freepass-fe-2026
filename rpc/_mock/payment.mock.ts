@@ -62,3 +62,31 @@ export async function uploadPaymentProofMock(
 
   return mockOrder;
 }
+
+/**
+ * Confirm payment (mock - MVP implementation)
+ */
+export async function confirmPaymentMock(orderId: string): Promise<OrderDTO> {
+  await delay(1200);
+
+  // Simulate occasional errors (5% failure rate for testing)
+  if (Math.random() < 0.05) {
+    throw new Error("Failed to confirm payment");
+  }
+
+  // Return updated order with payment confirmed
+  const mockOrder: OrderDTO = {
+    id: orderId,
+    userId: "user-1",
+    canteenId: "canteen-1",
+    orderStatus: OrderStatus.PROCESSING,
+    paymentStatus: PaymentStatus.PAID,
+    paymentMethod: PaymentMethod.QRIS,
+    totalAmount: 50000,
+    items: [],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  };
+
+  return mockOrder;
+}

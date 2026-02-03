@@ -7,10 +7,12 @@
 import {
   getPaymentByOrderIdMock,
   uploadPaymentProofMock,
+  confirmPaymentMock,
 } from "./_mock/payment.mock";
 import {
   getPaymentByOrderIdReal,
   uploadPaymentProofReal,
+  confirmPaymentReal,
 } from "./_real/payment.real";
 import { createRpc } from "./utils";
 
@@ -30,4 +32,13 @@ export const getPaymentByOrderId = createRpc(
 export const uploadPaymentProof = createRpc(
   uploadPaymentProofMock,
   uploadPaymentProofReal,
+);
+
+/**
+ * Confirm payment (MVP implementation)
+ * Automatically switches between mock and real API based on ENABLE_MOCK
+ */
+export const confirmPayment = createRpc(
+  confirmPaymentMock,
+  confirmPaymentReal,
 );
