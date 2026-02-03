@@ -67,10 +67,12 @@ export default function CanteensPage() {
         />
       </div>
 
-      <CanteenList
-        canteens={filteredCanteens}
-        onCanteenClick={(canteen) => router.push(`/canteens/${canteen.id}`)}
-      />
+      <div className="p-4 border-rounded bg-primary/5 rounded-3xl">
+        <CanteenList
+          canteens={filteredCanteens}
+          onCanteenClick={(canteen) => router.push(`/canteens/${canteen.id}`)}
+        />
+      </div>
     </div>
   );
 }
