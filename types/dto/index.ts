@@ -37,6 +37,23 @@ export enum MenuCategory {
   BEVERAGE = "BEVERAGE",
 }
 
+// ==================== Review ====================
+
+/**
+ * Review entity from backend
+ */
+export interface ReviewDTO {
+  id: string;
+  userId: string;
+  userName: string;
+  userAvatarUrl: string | null;
+  canteenId: string;
+  rating: number;
+  comment: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 // ==================== User & Auth ====================
 
 /**

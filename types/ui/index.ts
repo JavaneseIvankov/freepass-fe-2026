@@ -47,6 +47,26 @@ export interface CanteenDetail extends Canteen {
   };
 }
 
+// ==================== Review ====================
+
+export interface Review {
+  id: string;
+  userId: string;
+  userName: string;
+  userAvatarUrl: string;
+  canteenId: string;
+  rating: number;
+  comment: string;
+  createdAt: string; // Formatted date
+  relativeTime: string; // e.g., "2 days ago"
+}
+
+export interface ReviewFilters {
+  canteenId?: string;
+  rating?: number;
+  limit?: number;
+}
+
 // ==================== Menu ====================
 
 export interface MenuItem {
