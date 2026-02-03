@@ -43,3 +43,25 @@ export function useUploadPaymentProof() {
     },
   });
 }
+
+/**
+ * Confirm payment (MVP implementation)
+ */
+export function useConfirmPayment() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({ orderId }: { orderId: string }) => {
+      const dto = await rpc.confirmPayment(orderId);
+      return mapOrder(dto);
+    },
+    onSuccess: (order) => {
+      // Invalidate order query to refetch
+      queryClient.invalidateQueries({
+        queryKey: queryKeyStore.order.detail(order.id),
+      });
+      // Also invalidate orders list
+      queryClient.invalidateQueries({ queryKey: queryKeyStore.order.all });
+    },
+  });
+}
