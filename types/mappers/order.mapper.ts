@@ -34,6 +34,8 @@ export function mapOrder(dto: OrderDTO): Order {
     orderStatus: dto.orderStatus,
     paymentStatus: dto.paymentStatus,
     paymentMethod: dto.paymentMethod,
+    hasReview: !!dto.reviewId,
+    reviewId: dto.reviewId,
     createdAt: dto.createdAt,
     updatedAt: dto.updatedAt,
     // Computed fields

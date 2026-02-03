@@ -59,6 +59,7 @@ export function mapReview(dto: ReviewDTO): Review {
     userName: dto.userName,
     userAvatarUrl: dto.userAvatarUrl || "/placeholder-avatar.png",
     canteenId: dto.canteenId,
+    orderId: dto.orderId,
     rating: dto.rating,
     comment: dto.comment,
     createdAt: formatDate(dto.createdAt),

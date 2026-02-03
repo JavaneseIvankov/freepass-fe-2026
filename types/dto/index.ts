@@ -48,10 +48,20 @@ export interface ReviewDTO {
   userName: string;
   userAvatarUrl: string | null;
   canteenId: string;
+  orderId: string;
   rating: number;
   comment: string;
   createdAt: string;
   updatedAt: string;
+}
+
+/**
+ * Create review payload
+ */
+export interface CreateReviewDTO {
+  orderId: string;
+  rating: number;
+  comment?: string;
 }
 
 // ==================== User & Auth ====================
@@ -216,6 +226,7 @@ export interface OrderDTO {
   orderStatus: OrderStatus;
   paymentStatus: PaymentStatus;
   paymentMethod: PaymentMethod | null;
+  reviewId: string | null;
   createdAt: string;
   updatedAt: string;
 }

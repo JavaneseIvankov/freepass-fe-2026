@@ -55,6 +55,7 @@ export interface Review {
   userName: string;
   userAvatarUrl: string;
   canteenId: string;
+  orderId: string;
   rating: number;
   comment: string;
   createdAt: string; // Formatted date
@@ -117,6 +118,8 @@ export interface Order {
   orderStatus: OrderStatus;
   paymentStatus: PaymentStatus;
   paymentMethod: PaymentMethod | null;
+  hasReview: boolean;
+  reviewId: string | null;
   createdAt: string; // ISO string
   updatedAt: string;
   // Computed fields
