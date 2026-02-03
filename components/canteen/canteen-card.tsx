@@ -55,6 +55,7 @@ export function CanteenCard({ canteen, onClick, className }: CanteenCardProps) {
 
         {/* Rating Badge */}
         <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-background/95 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg">
+          {/* FIXME: non theme-token color usage */}
           <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
           <span className="font-bold text-sm">{canteen.rating.toFixed(1)}</span>
           <span className="text-xs text-muted-foreground">

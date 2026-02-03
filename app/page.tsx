@@ -1,11 +1,11 @@
 import Navbar from "@/components/navbar";
 import { Badge } from "@/components/ui/badge";
 import {
-	Card,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
+   Card,
+   CardDescription,
+   CardFooter,
+   CardHeader,
+   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
@@ -124,7 +124,7 @@ export default function Page() {
 						<span className="font-bold">Halo,</span>
 						&nbsp;Dudung!
 					</h1>
-					<p className="text-muted-foreground mt-2">
+					<p className="text-muted-foreground mt-2"r
 						Mau makan apa nih hari ini?
 					</p>
 				</div>
