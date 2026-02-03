@@ -26,7 +26,7 @@ export default function CanteensPage() {
   if (isLoading) {
     return (
       <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-8">Canteens</h1>
+        <h1 className="text-3xl font-bold mb-8">Canteeneo</h1>
         <CanteenListSkeleton count={6} />
       </div>
     );
@@ -36,7 +36,7 @@ export default function CanteensPage() {
   if (error) {
     return (
       <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-8">Canteens</h1>
+        <h1 className="text-3xl font-bold mb-8">Canteeneo</h1>
         <Alert variant="destructive">
           <p className="font-semibold">Failed to load canteens</p>
           <p className="text-sm mt-1">{error.message}</p>
@@ -50,7 +50,7 @@ export default function CanteensPage() {
     <div className="container mx-auto p-4 md:p-6">
       <div className="flex flex-col gap-4 mb-6 md:mb-8">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl md:text-3xl font-bold">Canteens</h1>
+          <h1 className="text-2xl md:text-3xl font-bold">Canteeneo</h1>
           {canteens && canteens.length > 0 && (
             <Badge variant="secondary">
               {hasActiveSearch
