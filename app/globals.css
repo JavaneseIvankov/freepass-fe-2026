@@ -124,6 +124,18 @@
     @apply bg-background text-foreground;
   }
 }
+@layer utilities {
+
+   /* Hide scrollbar for horizontal scroll */
+   .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+   }
+
+   .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+   }
+}
 @layer components {
    .container {
       width: 100%;
