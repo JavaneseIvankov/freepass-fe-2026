@@ -117,26 +117,26 @@ const CartButton = (props: { cart: TCartOverview; className?: string }) => {
 
 export default function Page() {
 	return (
-		<>
-			<div className="py-2 w-full">
-				<div className="container max-w-[90%] mx-auto flex flex-col py-4">
-					<h1 className="text-xl">
-						<span className="font-bold">Halo,</span>
-						&nbsp;Dudung!
-					</h1>
-					<p className="text-muted-foreground mt-2"r
-						Mau makan apa nih hari ini?
-					</p>
-				</div>
-			</div>
-			<main className="w-screen">
-				<div>
-					<CanteenGrid className="bg-muted m-4 rounded-[2rem]" />
-				</div>
-			</main>
-			<Navbar />
-		</>
-	);
+  <>
+    <div className="py-2 w-full">
+      <div className="container max-w-[90%] mx-auto flex flex-col py-4">
+        <h1 className="text-xl">
+          <span className="font-bold">Halo,</span>
+          &nbsp;Dudung!
+        </h1>
+        <p className="text-muted-foreground mt-2">
+          Mau makan apa nih hari ini?
+        </p>
+      </div>
+    </div>
+    <main className="w-screen">
+      <div className="m-5 bg-black">
+        <CanteenGrid className="bg-muted m-4 rounded-[2rem]" />
+      </div>
+    </main>
+    <Navbar />
+  </>
+);
 }
 
 function CanteenGrid({ className }: { className?: string }) {
