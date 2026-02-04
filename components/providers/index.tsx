@@ -22,4 +22,4 @@ export default function Providers({
   );
 }
 
-const Toaster = () => <SonnerToaster />;
+const Toaster = () => <SonnerToaster position="top-center" />;
