@@ -1,23 +1,25 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+"use client";
+
+import { QueryClientProvider } from "@tanstack/react-query";
 import { useState } from "react";
 import { Toaster as SonnerToaster } from "sonner";
+import GlobalSheet from "@/components/global-sheet";
+import { queryClient } from "@/lib/query-client";
 
 export default function Providers({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	const [qc] = useState(() => createQueryClient());
+  const [qc] = useState(() => queryClient);
 
-	return (
-		<QueryClientProvider client={qc}>
-			{children}
-			<Toaster />
-		</QueryClientProvider>
-	);
+  return (
+    <QueryClientProvider client={qc}>
+      {children}
+      <GlobalSheet />
+      <Toaster />
+    </QueryClientProvider>
+  );
 }
 
-const Toaster = () => <SonnerToaster />;
-const createQueryClient = () => {
-	return new QueryClient();
-};
+const Toaster = () => <SonnerToaster position="top-center" />;
