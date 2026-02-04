@@ -24,6 +24,7 @@ export async function getPaymentByOrderIdMock(
     paymentStatus: PaymentStatus.UNPAID,
     paymentMethod: PaymentMethod.QRIS,
     totalAmount: 50000,
+    reviewId: null,
     items: [],
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
@@ -56,6 +57,7 @@ export async function uploadPaymentProofMock(
     paymentMethod: PaymentMethod.BANK_TRANSFER,
     totalAmount: 50000,
     items: [],
+    reviewId: null,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   };
@@ -79,6 +81,7 @@ export async function confirmPaymentMock(orderId: string): Promise<OrderDTO> {
     id: orderId,
     userId: "user-1",
     canteenId: "canteen-1",
+    reviewId: null,
     orderStatus: OrderStatus.PROCESSING,
     paymentStatus: PaymentStatus.PAID,
     paymentMethod: PaymentMethod.QRIS,
